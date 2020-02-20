@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Header from './Components/Header';
+import Books from './Components/Books';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App" style={{  
+          backgroundImage: "url(" + "https://artsy-media-uploads.s3.amazonaws.com/vUNbMla7C4d6_OwBKt9fMQ%2FArtsy+-+Josephine+Meckseper-0226.jpg" + ")",
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'}}>
+        
+        <Header />
+        <Books />
+      </div>
+    );
+  }
 }
-
 export default App;
